@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="MailKit" />
+    <None Remove="Google.Cloud.Storage.V1" />
+    <None Remove="Models\" />
+    <None Remove="Models\DTOs\" />
+    <None Remove="Microsoft.Extensions.Options.ConfigurationExtensions" />
+    <None Remove="Microsoft.AspNetCore.Http" />
+    <None Remove="Providers\" />
+    <None Remove="Classes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="3.4.3" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj" />
+    <ProjectReference Include="..\Repositories\Repositories.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Models\DTOs\" />
+    <Folder Include="Providers\" />
+    <Folder Include="Classes\" />
+  </ItemGroup>
+</Project>
